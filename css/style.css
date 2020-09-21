@@ -165,7 +165,7 @@ nav h3, nav h4 {
 .footer {
  position: fixed;
  width: 100%;
- margin-bottom: 50px;
+ margin-bottom: 20px;
  bottom: 0;
 }
 
@@ -322,7 +322,7 @@ nav ul img {
  position: fixed;
  width: 350px;
  font-size: 10px;
- margin-bottom: 50px;
+ margin-bottom: 20px;
  bottom: 0;
 }
 
