@@ -196,12 +196,27 @@ h2 {
 
 /*--Contact Page Styles--*/
 
-.contact-title {
+.contact-title h3 {
   font-size: 50px;
   font-weight: bold;
   margin-bottom: 40px;
   transition: all 4s ease-in-out;
 }
+
+.contact-title p {
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.contact-title a {
+  font-weight: bold;
+  color: #587aea;
+}
+
+span.bold {
+  font-weight: bold;
+}
+
 
 form {
   transition: all 4s ease-in-out;
