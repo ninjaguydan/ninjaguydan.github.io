@@ -1,111 +1,126 @@
-/*
- * General/Utility Styles
-*/
+/* Project: Portfolio Site */
+/* Author: Daniel Thompson */
 
+/* General/Utility Styles*/
 * {
   -moz-box-sizing: border-box; /* Firexfox */
   -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
   box-sizing: border-box; /* IE */
+  
 }
 
 body {
   margin: 0;
   background: rgb(245, 245, 245);
+  /* font-family: 'Montserrat', sans-serif; */
   font-family: 'Open Sans', arial, sans-serif;
-  font-size: 0.875rem;
-  letter-spacing: 1.5px;
+  font-size: 0.75rem;/*12px*/
+  letter-spacing: 0.05rem;/*8px*/
+  line-height: 1rem;/*12px*/
   color: rgb(86, 90, 92);
 }
-
-.clearfix:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
+  
 a {
-  color: #fff;
+  color: #000000;
   text-decoration: none;
 }
 
+a:hover {
+  color: #4969cf;
+}
+  
 strong {
   font-weight: 600;
 }
-
+  
 img {
   border: none;
-}
-
-
-
-
-/* Layout Styles */
-
-header {
-  position: fixed;
-  height: 100px;
-  width: 100%;
-  background-color: black;
-  display: flex;
-  align-items: center;
-  padding-left: 50px;
 }
 
 h1 {
   display: none;
 }
 
-header img {
-  width: 60px; 
-  height: 60px;
+
+/*Intro Anim*/
+.intro {
+  background: white;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 3;
+  display: grid;
 }
 
+.intro-logo {
+  width: 70%;
+  height: 70%;
+  margin: auto;
+}
 
-/*hamburger menu*/
+/* Header Styles */
+header {
+  position: fixed;
+  height: 8.25em;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  padding-left: 1.875rem;/*30px*/
+  box-shadow: 0px 5px 8px rgba(184, 185, 195, .25);
+  z-index: 2;
+}
+
+header img {
+  width: 3.75rem;/*60px*/ 
+  height: 3.75rem;/*60px*/
+}
+
+/* ...hamburger Menu */
 .menu-btn {
   position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 80px;
-  height: 80px;
+  width: 3.75rem;/*60px*/
+  height: 3.75rem;/*60px*/
   cursor: pointer;
   transition: all .1s ease-in-out;
-  right: 50px;
- /*border: 3px solid #fff;*/
+  right: 1.875rem;
+  /* border: 3px solid rgb(37, 37, 37); */
 }
 
 .menu-btn_burger {
-  width: 45px;
-  height: 3px;
-  background: #fff;
-  border-radius: 5px;
-  transition: all .1 ease-in-out;
+  width: 2.5rem; /*40px*/
+  height: 0.25rem; /*4px*/
+  background: black;
+  border-radius: 0.3125rem; /*5px*/
+  transition: all .1s ease-in-out;
 }
-
+  
 .menu-btn_burger::before, .menu-btn_burger::after {
   content: '';
   position: absolute;
-  width: 45px;
-  height: 3px;
-  background: #fff;
-  border-radius: 5px;
+  width: 2.5rem; /*40px*/
+  height: 0.25rem; /*4px*/
+  background: black;
+  border-radius: 0.3125rem; /*5px*/
   transition: all .1s ease-in-out;
 }
 
 .menu-btn_burger::before {
-  transform: translateY(-13px);
+  transform: translateY(-12px);
   transform-origin: left, top;
 }
 
 .menu-btn_burger::after {
-  transform: translateY(13px);
+  transform: translateY(12px);
   transform-origin: left, bottom;
 }
 
-/* ANIMATION */
+/* .../...hamburger Animation */
 .menu-btn.open .menu-btn_burger {
-  background-color: black;
+  background: transparent;
 }
 
 .menu-btn.open .menu-btn_burger::before {
@@ -116,273 +131,272 @@ header img {
   transform: rotate(-45deg);
 }
 
-/*dropdown menu*/
+
+
+/* Dropdown Nav Menu */
 nav {
   position: fixed;
-  background: rgba(0, 0, 0, 0.95);
+  background: rgba(255, 255, 255, 0.95);
   height: 100vh;
   width: 100vw;
   text-align: center;
   justify-content: center;
-  margin-top: 100px;
-}
-
-#overlay {
+  margin-top: 6.25rem;/*100px*/
   display: none;
-}
-
-
-nav li {
-  font-size: 20px;
-  margin-top: 50px;
-}
-
-
-nav img {
-  width: 35px;
-  height: 35px;
-  margin: 0 20px 20px 20px;
-}
-
-nav li img {
-  display: none;
-}
-
-/* this is the grayed out effect. Remove when you update comic*/
- nav li a.dead {
-  opacity: 0.4;
+  z-index: 1;
+  animation: overlay .5s forwards;
 }
 
 nav h3 {
-  color: #fff;
-  margin-bottom: 10px;
+  margin-bottom: 0.3125rem; /*5px;*/
+  font-weight: 600;
 }
 
-nav h3, nav h4 {
-  font-size: 10px;
+nav h3 , nav h4 {
+  color: rgb(0, 0, 0);
+}
+
+nav .footer img {
+  width: 2.188rem; /*35px*/
+  height: 2.188rem; /*35px*/
+  margin: 0 1.25rem 0.75rem 1.25rem; /*0 20px 12px 20px*/
+}
+
+nav li {
+  font-size: 1.25rem; /*20px*/
+  text-transform: uppercase;
+  margin-top: 5rem; /*80px;*/
 }
 
 .footer {
- position: fixed;
- width: 100%;
- margin-bottom: 20px;
- bottom: 0;
-}
-
-/*content*/
-
-section {
-  width: 100%;
-  padding: 50px;
-  text-align: center;
-}
-
-h2 {
-  font-size: 50px;
-  margin: 130px 0 80px 0;
-}
-
-.art img {
-  width: 100%;
-  box-shadow: -10px 10px 8px #dcdcdc;
-  margin-bottom: 50px;
-}
-
-.profile img {
-  width: 100%;
-  margin-bottom: 50px;
-  margin-left: -80px;
-}
-
-.stats {
-  width: 100%;
-}
-
-/*--Contact Page Styles--*/
-
-.contact-title h3 {
-  font-size: 50px;
-  font-weight: bold;
-  margin-bottom: 40px;
-  transition: all 4s ease-in-out;
-}
-
-.contact-title p {
-  font-size: 18px;
-  line-height: 30px;
-}
-
-.contact-title a {
-  font-weight: bold;
-  color: #587aea;
-}
-
-span.bold {
-  font-weight: bold;
-}
-
-
-form {
-  transition: all 4s ease-in-out;
-}
-
-.form-control {
-  width: 90%;
-  background: transparent;
-  border: none;
-  outline: none;
-  border-bottom: 1px solid gray;
-  font-size: 18px;
-  margin-bottom: 16px;
-}
-
-input {
-  height: 50px;
-}
-
-form .submit {
-  background: #587aea;
-  width: 90%;
-  font-weight: bold;
-  color: #fff;
-  font-size: 20px;
-  letter-spacing: 1px;
-  height: 50px;
-  margin-top: 20px;
-  border-radius: 50px;
-}
-
-form .submit:hover {
-  background-color: #588eea;
-  cursor: pointer;
-}
-
-/*-------When display is larger than 1000 pixels---------*/
-@media only screen and (min-width: 1000px) {
-  #menu-btn {display: none;}
-  #overlay {display: block !important;}
-  nav li img {display: block;}
-
-header {
-  height: 350px;
-  width: 350px;
-  justify-content: center;
-  padding: 0;
-}
-
-header img {
-  width: 90px; 
-  height: 90px;
-}
-
-nav {
-  width: 350px;
-  height: 100%;
-  background: black;
   position: fixed;
-  text-align: center;
-  margin-top: 350px;
+  width: 100%;
+  margin-bottom: 1.25rem; /*20px;*/
+  bottom: 0;
 }
 
-nav li {
-  font-size: 20px;
-  margin-top: 0;
-  margin-bottom: 100px;
-  }
 
-nav li a {
-  display: flex;
-  }
-
-nav h3 {
-  margin-bottom: 5px;
-}
-
-nav img {
-  width: 20px;
-  height: 20px;
-  margin: 0 10px 10px 10px;
-}
-
-ul {
-  width: 160px;
-  margin: 0 auto;
-  text-align: left;
-}
-
-nav ul img {
-  width: 20px;
-  height: 20px;
-  margin: 0;
-  margin-right: 20px;
-  position: relative;
-}
-
-.footer {
- position: fixed;
- width: 350px;
- font-size: 10px;
- margin-bottom: 20px;
- bottom: 0;
-}
-
+/* ---Page Content---*/
 section {
   width: 100vw;
-  margin-left: 350px;
-  padding-left: 130px;
-  padding-top: 130px;
-  text-align: left;
+  height: 100%;
+  padding: 100px 50px 50px 50px;
+  text-align: center;
+  justify-content: center;
+}
+
+section span {
+  font-weight: 700;
+  color: #4969cf;
 }
 
 h2 {
-  font-size: 90px;
-  margin: 0px 0 130px 0;
+  font-size: 3.125rem;
+  margin: 50px 0 0 0;
+  line-height: 1.25em;/*48px*/
+}
+
+p {
+  font-size: 1.125rem;
+  margin-top: 1.5em;
+  line-height: 1.125em;
 }
 
 .art img {
-  width: 700px;
-  box-shadow: -10px 10px 8px #dcdcdc;
-  margin-bottom: 0;
-  margin: 0 60px 60px 0;
-}
-
-.art .wide {
-  width: 1460px;
-}
-
-/*--About Page Styles--*/
-
-.info {
-  width: auto;
+  width: 100%;
+  box-shadow: -10px 10px 8px rgba(184, 185, 195, .5);
+  margin-top: 50px;
+  animation: fadeIn 1s forwards;
 }
 
 .profile img {
-  width: 500px;
-  margin-bottom: 50px;
-  margin-left: -80px;
-  float: left;
+  width: 100%;
+  margin-top: 5em;
+  animation: fadeIn 1s forwards;
 }
 
 .stats {
-  width: 775px;
-  float: left;
+  width: 100%;
+  margin-top: -40px;
+  margin-left: -20px;
+  animation: fadeIn 1s forwards;
 }
 
 
 
-/*--Contact Page Styles ---*/
 
-form .submit {
-  width: 600px;
+
+/* ---Animations ---*/
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes overlay {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+
+
+
+
+/*---------------When display is as large as a tablet---------------*/
+@media only screen 
+and (min-width : 730px)  { 
+
+  .intro-logo {
+    width: 40%;
+    height: 40%;
   }
 
-.form-control {
-  width: 600px;
+  /* ---Page Content---*/
+  section {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: auto auto 1fr;
+  }
+
+  h2 {
+    grid-column: 1 / 3;
+  }
+
+  p {
+    grid-column: 1 / 3;
+    padding-left: 2.5em;
+    padding-right: 2.5em;
+  }
+
+  .art img {
+    width: 90%;
+  }
+
+  .profile img {
+    width: 60%;
+    margin: 5em 0 0 -4em;
+  }
+
+  .stats {
+    margin-top: 5em;
+    margin-left: -7em;
+    width: 110%;
+  }
 }
 
-body.contact {
-  background: url(../images/contact/guts.jpg);
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+
+
+/*---------------When display is large enough for a desktop---------------*/
+@media only screen 
+and (min-width : 1200px)  { 
+
+
+  /* ..header stuff */
+  #menu-btn {
+    display: none;
+  }
+
+  header {
+    width: 40%;
+  }
+
+  nav {
+    display: inline-flex !important;
+    width: 60%;
+    height: 8.25em;
+    position: fixed;
+    background-color:white;
+    box-shadow: 4px 5px 8px rgba(184, 185, 195, .25);
+    z-index: 2;
+    right: 0;
+    top: 0;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    animation: none;
+  }
+
+  ul {
+    display: flex;
+    margin-left: auto;
+  }
+
+  nav li {
+    font-size: .75rem;
+    margin: 0;
+    margin-right: 3em;
+  }
+
+  nav h3 , nav h4 {
+    display: none;
+  }
+  
+  nav .footer img {
+    width: 2em;
+    height: 2em;
+    margin: auto .75rem; 
+  }
+
+  .footer {
+    position: relative;
+    width: 17em;
+    margin: 0;
+    border-left: 1px solid black;
+  }
+
+
+/* ..page content*/
+  section {
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    grid-template-rows: auto auto 1fr 1fr ;
+  }
+  
+  h2 {
+    grid-column: 1 / 5;
+  }
+
+  p {
+    grid-column: 2 / 4;
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 2.5em;;
+  }
+
+  .profile {
+    grid-row: 3 / 5;
+    grid-column: 2 / 3;
+  }
+
+  .profile img {
+    width: 80%;
+    margin: 0;
+    margin-left: -17em;
+  }
+
+  .stats {
+    margin-top: 1em;
+    margin-left: -10em;
+    width: 140%;
+    grid-row: 3 / 5;
+    grid-column: 3 / 4;
+  }
+
+
+
+
+
 }
+
+
+

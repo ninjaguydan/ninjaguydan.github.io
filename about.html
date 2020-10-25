@@ -1,52 +1,47 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>Daniel Thompson - Portfolio</title>
+    <meta charset="UTF-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="The Portfolio site featuring work by Daniel Thompson">
+	<meta name="keywords" content="art illustration graphic designer portfolio fanart">
+  	<link href='//fonts.googleapis.com/css?family=Open+Sans:400,700,600' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="css/reset.css">
   	<link rel="stylesheet" href="css/style.css">
-  	<meta name="description" content="The Portfolio site featuring work by Daniel Thompson">
-  	<link href='//fonts.googleapis.com/css?family=Open+Sans:400,700,600' rel='stylesheet' type='text/css'>
-  	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Daniel Thompson - About</title>
 </head>
 
 <body>
 
 	<header>
-
 		<h1>Daniel Thompson</h1> 
-
-		<img src="images/icons/dt.svg" alt="DT logo"><!--header logo-->
-
-			<div onclick="myFunction()" id="menu-btn" class="menu-btn">
-				<div class="menu-btn_burger"></div>
-			</div>
-
+		<!--header logo-->
+		<a href="index.html"><img src="images/icons/dt.svg" alt="DT logo" class="logo"></a>
+		<!--Menu Button Burger!-->
+		<div onclick="openMenu()" id="menu-btn" class="menu-btn">
+			<div class="menu-btn_burger"></div>
+		</div>
 	</header>
 
-	<nav id="overlay">	
 
+	<!-- Navigation Menu Items/ Icons -->
+	<nav>	
 		<ul>
-			<li>
-			<a href="index.html"><img src="images/icons/photo.svg">Illustration</a>
+			<li><a href="illu.html"><span>Illustration</span></a>
+			</li> 
+			
+			<li><a href="design.html"><span>Design</span></a>
 			</li> 
 			
 			<li>
-			<a href="design.html"><img src="images/icons/desktop.svg">Design</a>
+			<a href="about.html"><span>About</span></a>
 			</li> 
-			
-			<li>
-			<a href="#" class="dead"><img src="images/icons/speech.svg">Comics</a>
-			</li> 
-			
-			<li>
-			<a href="about.html"><img src="images/icons/user.svg">About</a>
-			</li> 
-			
-			<li>
-			<a href="contact.html"><img src="images/icons/phone.svg">Contact</a>
-			</li>
+
+			<li><a href="images/download/daniel_thompson.pdf" target="_blank" download><span>Resume</span></a>
+            </li>
 		</ul>
 
+		<!-- Copyright and Contact info -->
 		<div class="footer">	
 			<a href="https://twitter.com/NinjaGuyDan_" target="_blank">
 				<img src="images/icons/twitter.svg" alt="Twitter Logo"></a>
@@ -57,18 +52,27 @@
 			<h3>Designed and developed by Daniel Thompson</h3>
 			<h4>Copyright &#169;2020 Daniel Thompson</h4>
 		</div>
-	</nav><!--menu-->	
+	</nav>	
 
-	<section class="info">
+
+	<section>
 		<h2>Daniel Thompson</h2>
+		<p>Hey! I'm a graphic designer, illustrator and aspiring front end web developer from Jackson, MS. <br>
+		   <br>Despite my talents
+		   with the arts, I've always felt like I was more of a left brain person&mdash;being mostly analytical and methodical in my thinking
+		   rather than artistic. Since teaching myself to code, I've never felt more satisfied with what what I've been able to do with just numbers and letters.<br>
+		   <br>That being said, all the work you've seen here was done by me, including the site itself! If you like what you see, and you'd like
+		   for me to create or build something for you, shoot me an email at <span>dthompson0190@gmail.com</span> or message me on any social media platform. Looking forward to hearing from you!
+		</p>
 
 		<div class="profile">
 			<img src="images/about/dt.gif">
 		</div>
-
 		<img src="images/about/stats.jpg" class="stats">
 
 	</section>
-	<script src="main.js"></script>
+
+
+<script src="javascript/about.js"></script>
 </body>
 </html>

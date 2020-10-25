@@ -1,52 +1,51 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>Daniel Thompson - Portfolio</title>
+    <meta charset="UTF-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="The Portfolio site featuring work by Daniel Thompson">
+	<meta name="keywords" content="art illustration graphic designer portfolio fanart">
+  	<link href='//fonts.googleapis.com/css?family=Open+Sans:400,700,600' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="css/reset.css">
   	<link rel="stylesheet" href="css/style.css">
-  	<meta name="description" content="The Portfolio site featuring work by Daniel Thompson">
-  	<link href='//fonts.googleapis.com/css?family=Open+Sans:400,700,600' rel='stylesheet' type='text/css'>
-  	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Daniel Thompson - Illustration</title>
 </head>
 
 <body>
 
+	<div class="intro"> 
+        <div class="intro-logo"></div>
+    </div>
+
 	<header>
-
 		<h1>Daniel Thompson</h1> 
-
-		<img src="images/icons/dt.svg" alt="DT logo"><!--header logo-->
-
-			<div onclick="myFunction()" id="menu-btn" class="menu-btn">
-				<div class="menu-btn_burger"></div>
-			</div>
-
+		<!--header logo-->
+		<a href="index.html"><img src="images/icons/dt.svg" alt="DT logo" class="logo"></a>
+		<!--Menu Button Burger!-->
+		<div onclick="openMenu()" id="menu-btn" class="menu-btn">
+			<div class="menu-btn_burger"></div>
+		</div>
 	</header>
 
-	<nav id="overlay">	
-
+	
+	<!-- Navigation Menu Items/ Icons -->
+	<nav>	
 		<ul>
-			<li>
-			<a href="index.html"><img src="images/icons/photo.svg">Illustration</a>
+			<li><a href="illu.html"><span>Illustration</span></a>
+			</li> 
+			
+			<li><a href="design.html"><span>Design</span></a>
 			</li> 
 			
 			<li>
-			<a href="design.html"><img src="images/icons/desktop.svg">Design</a>
+			<a href="about.html"><span>About</span></a>
 			</li> 
-			
-			<li>
-			<a href="#" class="dead"><img src="images/icons/speech.svg">Comics</a>
-			</li> 
-			
-			<li>
-			<a href="about.html"><img src="images/icons/user.svg">About</a>
-			</li> 
-			
-			<li>
-			<a href="contact.html"><img src="images/icons/phone.svg">Contact</a>
-			</li>
+
+			<li><a href="images/download/daniel_thompson.pdf" target="_blank" download><span>Resume</span></a>
+            </li>
 		</ul>
 
+		<!-- Copyright and Contact info -->
 		<div class="footer">	
 			<a href="https://twitter.com/NinjaGuyDan_" target="_blank">
 				<img src="images/icons/twitter.svg" alt="Twitter Logo"></a>
@@ -57,33 +56,21 @@
 			<h3>Designed and developed by Daniel Thompson</h3>
 			<h4>Copyright &#169;2020 Daniel Thompson</h4>
 		</div>
-	</nav><!--menu-->	
+	</nav>
 
 	<section>
 		<h2>Illustration</h2>
-
-		<div class="art">
-			<img src="images/illu-0.jpg"><!--deadpool-->
-			<img src="images/illu-1.jpg"><!--batman1-->
-			<img src="images/illu-2.jpg"><!--dannyp-->
-			<img src="images/illu-3.jpg"><!--spider-->
-			<img src="images/illu-4.jpg"><!--dbz-->
-			<img src="images/illu-5.jpg" class="wide"><!--tmnt wide-->
-			<img src="images/illu-6.jpg"><!--tmnt2-->
-			<img src="images/illu-7.jpg"><!--mass effect-->
-			<img src="images/illu-8.jpg"><!--thor-->
-			<img src="images/illu-9.jpg" class="wide"><!--batman wide-->
-			<img src="images/illu-10.jpg"><!--arbys-->
-			<img src="images/illu-11.jpg"><!--witcher-->
-			<img src="images/illu-12.jpg"><!--zelda-->
-			<img src="images/illu-13.jpg" class="wide"><!--karla wide-->
-			<img src="images/illu-14.jpg"><!--mario-->
-			<img src="images/illu-15.jpg"><!--metroid-->
-			<img src="images/illu-16.jpg"><!--krysta-->
-			<img src="images/illu-17.jpg" class="wide"><!--berserk wide-->
-
-		</div>
+		<!-- <div class="art"></div> -->
 	</section>
-	<script src="main.js"></script>
+
+	
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js" 
+	integrity="sha512-8Wy4KH0O+AuzjMm1w5QfZ5j5/y8Q/kcUktK9mPUVaUoBvh3QPUZB822W/vy7ULqri3yR8daH3F58+Y8Z08qzeg==" 
+	crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TimelineMax.min.js" 
+	integrity="sha512-lJDBw/vKlGO8aIZB8/6CY4lV+EMAL3qzViHid6wXjH/uDrqUl+uvfCROHXAEL0T/bgdAQHSuE68vRlcFHUdrUw==" 
+	crossorigin="anonymous"></script>
+<script src="javascript/lottie.js"></script>
+<script src="javascript/main.js"></script>
 </body>
 </html>
